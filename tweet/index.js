@@ -10,11 +10,11 @@
 
     var newBlob = new Buffer(myBlob);
 
-    if (myBlob instanceof Buffer) {
-        context.log("myBlob is a Buffer");
+    if (newBlob instanceof Buffer) {
+        context.log("newBlob is a Buffer");
     }
     else {
-        context.log("myBlob is not a Buffer");
+        context.log("newBlob is not a Buffer");
     }
 
     // var Twitter = require('twitter');
