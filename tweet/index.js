@@ -1,5 +1,5 @@
 ﻿module.exports = function (context, myBlob) {
-    context.log("Node.js blob trigger function processed blob \n Name:", context.bindingData.name, "\n Blob Size:", myBlob.length, "Bytes");
+    context.log("Node.js blob trigger function started");
     
     var phone = context.bindingData.phone;
     var text = context.bindingData.text;
@@ -8,7 +8,12 @@
 
     context.log("Working with " + fileName);
 
-    if (myBlob instanceof Buffer) context.log("myBlob is a Buffer");
+    if (myBlob instanceof Buffer) {
+        context.log("myBlob is a Buffer");
+    }
+    else {
+        context.log("myBlob is not a Buffer");
+    }
 
     // var Twitter = require('twitter');
 
